@@ -1,0 +1,9 @@
+.example-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-full-width {
+  width: 100%;
+}
