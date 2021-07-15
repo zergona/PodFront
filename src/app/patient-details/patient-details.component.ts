@@ -13,7 +13,7 @@ import { FormBuilder} from '@angular/forms';
 export class PatientDetailsComponent implements OnInit {
   request = null
   id = null
-  baseURL="http://localhost:8080/"
+  baseURL="https://pregledondemand.herokuapp.com/"
   requestForm = this.formBuilder.group({
     ssn: '',
     diagnosis: ''
@@ -25,7 +25,7 @@ export class PatientDetailsComponent implements OnInit {
 
   async fetchData(id){
     this.http
-      .get<any>('http://localhost:8080/request/' + id)
+      .get<any>('https://pregledondemand.herokuapp.com/request/' + id)
       .subscribe((result) => {
         console.log(result);
         this.request = result;
