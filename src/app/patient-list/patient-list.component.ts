@@ -40,7 +40,7 @@ export class PatientListComponent implements OnInit {
 
   async fetchData(){
     this.http
-      .get<any>('http://localhost:8080/request/getConfirmedActive')
+      .get<any>('http://pregledondemand.herokuapp.com/request/getConfirmedActive')
       .subscribe((result) => {
         console.log(result);
         this.requestList = result;
