@@ -1,1 +1,52 @@
-<p>patient-details works!</p>
+<div class="container">
+    <mat-card>
+
+        <mat-card-title>{{request.patient.firstName}} {{request.patient.lastName}}</mat-card-title>
+        <mat-card-content> Ime </mat-card-content>
+        
+    </mat-card>
+    <br>
+    <mat-card>
+    
+        <mat-card-title>{{request.patient.ssn}}</mat-card-title>
+        <mat-card-content> Broj Zdravstvenog Osiguranja </mat-card-content>
+        
+    </mat-card>
+    <br>
+    
+    <mat-card>
+    
+        <mat-card-title>{{request.patient.firstName}} {{request.patient.lastName}}</mat-card-title>
+        <mat-card-content> Ime </mat-card-content>
+        
+    </mat-card>
+    <br>
+    <mat-card>
+    
+        <mat-card-title>{{request.symptoms}}</mat-card-title>
+        <mat-card-content>  Simptomi </mat-card-content>
+        
+    </mat-card>
+    <br>
+    
+    
+    
+    
+    <mat-card>
+        <mat-card-title >
+            Dijagnoza i komentar
+        </mat-card-title>
+        <form [formGroup]="requestForm" (ngSubmit)="handleSubmit()" >
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Ostavite dijagnozu ili komentar</mat-label>
+                <textarea  formControlName="diagnosis" class="example-full-width" placeholder="Dijagnoza"></textarea>
+            </mat-form-field>
+              
+    <button mat-button color="primary">
+        <a > Zavrsi pregled </a>
+      </button>
+        </form>
+        
+    </mat-card>
+    
+</div>

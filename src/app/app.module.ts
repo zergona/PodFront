@@ -20,6 +20,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
@@ -51,7 +55,11 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatButtonModule,
     MatTableModule,
+    MatCardModule,
     HttpClientModule,
+    BrowserModule, 
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
