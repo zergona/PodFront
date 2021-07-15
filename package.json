@@ -2,13 +2,13 @@
   "name": "pod",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.0.5",
@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~10.0.5",
     "@angular/router": "~10.0.5",
     "rxjs": "~6.5.5",
+    "serve": "^12.0.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
